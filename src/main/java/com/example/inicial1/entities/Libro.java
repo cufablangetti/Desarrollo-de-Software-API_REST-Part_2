@@ -36,7 +36,7 @@ public class Libro {
     @Column(name = "autor")
     private String autor;
 
-    // Relación muchos a muchos con Autor
+    // Relación muchos a muchos con Autor.
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "libro_autor",
