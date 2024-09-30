@@ -1,4 +1,4 @@
-# TRABAJO PRACTICO API_REST - DESARROLLO DE SOFTWARE - 3K10
+# TRABAJO PRACTICO API_REST_PARTE-2 - DESARROLLO DE SOFTWARE - 3K10
 
 
 Hola soy Facundo Blangetti. Este proyecto es una introducción a la creación de una API REST usando Spring Boot. Primero, se exploran los conceptos básicos de REST y cómo se manejan las solicitudes HTTP. Luego, se crea y configura un proyecto utilizando Spring Initializr, agregando las dependencias necesarias como Spring Web.
