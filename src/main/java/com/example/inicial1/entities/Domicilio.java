@@ -14,17 +14,14 @@ import java.util.List;
 @ToString
 @Builder
 @Audited
-public class Domicilio {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Domicilio extends Base{
+
     @Column(name = "calle")
     private String calle;
     @Column(name = "numero")
     private int numero;
 
-    // Relación unidireccional one-to-many con Localidad
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_domicilio")
-    private List<Localidad> localidades;
+  @ManyToOne(optional = false)
+  @JoinColumn(name = "kf_localidad")
+    private Localidad localidad;
 }

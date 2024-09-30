@@ -13,10 +13,8 @@ import org.hibernate.envers.Audited;
 @ToString
 @Builder
 @Audited
-public class Autor {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Autor extends Base {
+
 
     @Column(name = "nombre")
     private String nombre;
@@ -24,7 +22,7 @@ public class Autor {
     @Column(name = "apellido")
     private String apellido;
 
-    @Column(name = "biografia")
+    @Column(name = "biografia", length = 1500)
     private String biografia;
 }
 

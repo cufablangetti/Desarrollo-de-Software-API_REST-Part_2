@@ -16,10 +16,8 @@ import java.util.List;
 @ToString
 @Builder
 @Audited
-public class Libro {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Libro extends Base{
+
 
     @Column(name = "titulo")
     private String titulo;
@@ -37,11 +35,7 @@ public class Libro {
     private String autor;
 
     // Relación muchos a muchos con Autor.
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "libro_autor",
-            joinColumns = @JoinColumn(name = "fk_libro"),
-            inverseJoinColumns = @JoinColumn(name = "fk_autor")
-    )
+    @ManyToMany(cascade = CascadeType.REFRESH)
+
     private List<Autor> autores;
 }
